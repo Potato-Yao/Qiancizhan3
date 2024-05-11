@@ -20,6 +20,9 @@ serde = { version = "1.0", features = ["derive"] }
 tauri = { version = "1.6.2", features = [] }
 rusqlite = "0.31.0"
 log = "0.4.21"
+lazy_static = "1.4.0"
+paste = "1.0.14"
+chrono = "0.4.38"
 
 [features]
 # this feature is used for production builds or when `devPath` points to the filesystem and the built-in dev server is disabled.

@@ -1,8 +1,10 @@
 <script setup lang="ts">
 import {ref} from "vue";
 import {invoke} from '@tauri-apps/api/tauri'
+import {useI18n} from "vue-i18n";
 
-let bookList = ref(new Map<String, String>)
+const {t} = useI18n();
+let bookList = ref(new Map<String, String>);
 
 invoke("get_wordbooks").then((res: any) => {
   for (const [k, v] of Object.entries(res)) {
@@ -14,6 +16,8 @@ invoke("get_wordbooks").then((res: any) => {
 
 <template>
   <v-container class="StartMenu">
+    <h2>{{ t('greet') }}</h2>
+    <h3>{{ t('choose_wordbook') }}</h3>
     <v-list lines="two">
       <v-list-item v-for="(item, index) in bookList" :key="index" :title="item[0]" :subtitle="item[1]"></v-list-item>
     </v-list>

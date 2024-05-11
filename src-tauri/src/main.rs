@@ -8,6 +8,10 @@ use tauri::Manager;
 use crate::file_util::{get_or_create_resource_dir, get_wordbooks};
 
 mod file_util;
+mod db_util;
+mod word_model;
+mod word_builder;
+mod word_util;
 
 fn main() -> Result<(), io::Error> {
     run_app()
@@ -26,9 +30,7 @@ fn run_app() -> Result<(), io::Error> {
             }
             Ok(())
         })
-        .invoke_handler(tauri::generate_handler![
-            get_wordbooks,
-        ])
+        .invoke_handler(tauri::generate_handler![get_wordbooks,])
         .run(tauri::generate_context!())
         .expect("error while running tauri application");
 
@@ -36,5 +38,4 @@ fn run_app() -> Result<(), io::Error> {
 }
 
 #[cfg(test)]
-mod tests {
-}
+mod tests {}
