@@ -1,4 +1,8 @@
 {
   "greet": "Welcome to qiancizhan",
-  "choose_wordbook": "Please choose a wordbook"
+  "choose_wordbook": "Please choose a wordbook",
+  "choose_wordbook_button": "choose wordbook",
+  "study_button": "study",
+  "edit_word_book_button": "edit wordbook",
+  "settings_button": "settings"
 }

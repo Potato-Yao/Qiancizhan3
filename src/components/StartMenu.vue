@@ -1,17 +1,17 @@
-<script setup lang="ts">
-import {ref} from "vue";
+<script setup lang="ts" name="StartMenu">
+import {ref} from "vue"
 import {invoke} from '@tauri-apps/api/tauri'
-import {useI18n} from "vue-i18n";
+import {useI18n} from "vue-i18n"
 
-const {t} = useI18n();
-let bookList = ref(new Map<String, String>);
+const {t} = useI18n()
+let bookList = ref(new Map<String, String>)
 
 invoke("get_wordbooks").then((res: any) => {
   for (const [k, v] of Object.entries(res)) {
-    bookList.value.set(k.toString(), v.toString());
-    console.log(bookList.value);
+    bookList.value.set(k.toString(), v.toString())
+    console.log(bookList.value)
   }
-});
+})
 </script>
 
 <template>

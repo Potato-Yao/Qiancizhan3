@@ -10,7 +10,9 @@ declare module 'vue' {
     HelloWorld: typeof import('./src/components/HelloWorld.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
+    Settings: typeof import('./src/components/Settings.vue')['default']
     Sidebar: typeof import('./src/components/Sidebar.vue')['default']
     StartMenu: typeof import('./src/components/StartMenu.vue')['default']
+    WordLists: typeof import('./src/components/WordLists.vue')['default']
   }
 }

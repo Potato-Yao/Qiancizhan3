@@ -1,4 +1,8 @@
 {
   "greet": "欢迎使用千词斩",
-  "choose_wordbook": "请选择单词本"
+  "choose_wordbook": "请选择单词本",
+  "choose_wordbook_button": "选择单词本",
+  "study_button": "背单词",
+  "settings_button": "设置",
+  "edit_word_book_button": "修改单词本"
 }
